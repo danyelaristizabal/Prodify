@@ -1,0 +1,11 @@
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.csprojAssemblyReference.cache
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.Entry.resources
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.Form1.resources
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.Properties.Resources.resources
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.csproj.GenerateResource.cache
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.csproj.CoreCompileInputs.cache
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\bin\Debug\Prodify.exe.config
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\bin\Debug\Prodify.exe
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\bin\Debug\Prodify.pdb
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.exe
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.pdb

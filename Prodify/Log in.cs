@@ -12,19 +12,27 @@ namespace Prodify
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1(string strTextBox, bool CLient)
         {
             InitializeComponent();
+            label1.Text = strTextBox;
         }
+
+       
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            /* hi hi 2 */
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
