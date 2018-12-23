@@ -9,3 +9,7 @@
 \\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\bin\Debug\Prodify.pdb
 \\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.exe
 \\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.pdb
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.CreateBusiness.resources
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.Registration.resources
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.UserWall.resources
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.SellerWall.resources

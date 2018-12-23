@@ -38,5 +38,11 @@ namespace Prodify
             frm.Show();
             Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

@@ -49,13 +49,24 @@
     <Compile Include="Admin.cs" />
     <Compile Include="Business.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="ClientRepository.cs" />
+    <Compile Include="CreateBusiness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBusiness.Designer.cs">
+      <DependentUpon>CreateBusiness.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dormitory.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IUser.cs" />
     <Compile Include="Log in.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Log in.Designer.cs">
       <DependentUpon>Log in.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entry.cs">
@@ -64,7 +75,28 @@
     <Compile Include="Entry.Designer.cs">
       <DependentUpon>Entry.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seller.cs" />
+    <Compile Include="SellerWall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerWall.Designer.cs">
+      <DependentUpon>SellerWall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserWall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserWall.Designer.cs">
+      <DependentUpon>UserWall.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CreateBusiness.resx">
+      <DependentUpon>CreateBusiness.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entry.resx">
       <DependentUpon>Entry.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +113,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerWall.resx">
+      <DependentUpon>SellerWall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserWall.resx">
+      <DependentUpon>UserWall.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,6 +137,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Prodify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
