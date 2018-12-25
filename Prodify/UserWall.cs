@@ -13,13 +13,15 @@ namespace Prodify
 {
     public partial class UserWall : Form
     {
-
+        BusinessRepository repository = new BusinessRepository();
+        Client MyClient; 
         public bool Client;
         public string StrTextBox;
 
 
-        public UserWall(bool client, string strTextBox)
+        public UserWall(bool client, string strTextBox, Client myClient)
         {
+            MyClient = myClient; 
             Client = client;
             StrTextBox = strTextBox;
             
@@ -39,22 +41,18 @@ namespace Prodify
 
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void UserWall_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetBusinessList(); 
+            dataGridView1.DataSource = GetBusinessList();
+            TotalBusiness.Text = "Total Business in your Dormitory: " + repository.Count(null, MyClient.Dormitory); 
         }
 
         private DataTable GetBusinessList() {
             DataTable dtBusiness = new DataTable();
             SqlConnection sq = new SqlConnection();
             sq.ConnectionString = @"Data Source =DANYEL-PC\SQLEXPRESS; Initial Catalog =Business; database =ProdifyDatabase; integrated security = SSPI";
-            SqlCommand scmd = new SqlCommand("SELECT * FROM Business", sq);
+            SqlCommand scmd = new SqlCommand("SELECT Name, Description, Price, Nkomnata, Seller, Phone From Business WHERE Dormitory = @Dormitory", sq);
+            scmd.Parameters.AddWithValue("@Dormitory", MyClient.Dormitory); 
             sq.Open(); 
             SqlDataReader reader = scmd.ExecuteReader();
             dtBusiness.Load(reader);   
@@ -67,6 +65,23 @@ namespace Prodify
             Entry NewEntry = new Entry(); 
             NewEntry.Show();
             Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateClient_Click(object sender, EventArgs e)
+        {
+            UpdateClient update = new UpdateClient(MyClient);
+            update.Show();
+            Close(); 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

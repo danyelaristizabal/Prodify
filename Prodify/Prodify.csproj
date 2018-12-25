@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs" />
     <Compile Include="Business.cs" />
+    <Compile Include="BusinessRepository.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="ClientRepository.cs" />
     <Compile Include="CreateBusiness.cs">
@@ -56,7 +56,6 @@
     <Compile Include="CreateBusiness.Designer.cs">
       <DependentUpon>CreateBusiness.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dormitory.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IUser.cs" />
@@ -66,7 +65,6 @@
     <Compile Include="Log in.Designer.cs">
       <DependentUpon>Log in.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entry.cs">
@@ -82,11 +80,31 @@
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
     <Compile Include="Seller.cs" />
+    <Compile Include="SellerRepository.cs" />
     <Compile Include="SellerWall.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SellerWall.Designer.cs">
       <DependentUpon>SellerWall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sq\ConnectionString.cs" />
+    <Compile Include="UpdateBusiness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBusiness.Designer.cs">
+      <DependentUpon>UpdateBusiness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateClient.Designer.cs">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSeller.Designer.cs">
+      <DependentUpon>UpdateSeller.cs</DependentUpon>
     </Compile>
     <Compile Include="UserWall.cs">
       <SubType>Form</SubType>
@@ -118,6 +136,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SellerWall.resx">
       <DependentUpon>SellerWall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBusiness.resx">
+      <DependentUpon>UpdateBusiness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateClient.resx">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSeller.resx">
+      <DependentUpon>UpdateSeller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserWall.resx">
       <DependentUpon>UserWall.cs</DependentUpon>

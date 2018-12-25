@@ -8,7 +8,6 @@ namespace Prodify
 {
     interface IUser 
     {
-        bool Log_in();
-        bool Registrate();
+         void Construct();
     }
 }

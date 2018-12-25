@@ -45,6 +45,11 @@
             this.button4 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.Price = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,10 +67,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(281, 406);
+            this.button2.Location = new System.Drawing.Point(283, 348);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(237, 44);
-            this.button2.TabIndex = 34;
+            this.button2.TabIndex = 5;
             this.button2.Text = "Create";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -86,10 +91,11 @@
             this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox1.Location = new System.Drawing.Point(282, 235);
+            this.textBox1.MaxLength = 10;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(208, 19);
-            this.textBox1.TabIndex = 33;
-            this.textBox1.Text = "Phone Number";
+            this.textBox1.TabIndex = 3;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // panel4
             // 
@@ -107,10 +113,11 @@
             this.Nkomnata.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nkomnata.ForeColor = System.Drawing.Color.White;
             this.Nkomnata.Location = new System.Drawing.Point(281, 187);
+            this.Nkomnata.MaxLength = 4;
             this.Nkomnata.Name = "Nkomnata";
             this.Nkomnata.Size = new System.Drawing.Size(191, 19);
-            this.Nkomnata.TabIndex = 31;
-            this.Nkomnata.Text = "Room Number";
+            this.Nkomnata.TabIndex = 2;
+            this.Nkomnata.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Nkomnata_KeyPress);
             // 
             // label1
             // 
@@ -139,10 +146,11 @@
             this.BusinessDescription.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BusinessDescription.ForeColor = System.Drawing.SystemColors.Window;
             this.BusinessDescription.Location = new System.Drawing.Point(281, 135);
+            this.BusinessDescription.MaxLength = 327;
+            this.BusinessDescription.Multiline = true;
             this.BusinessDescription.Name = "BusinessDescription";
-            this.BusinessDescription.Size = new System.Drawing.Size(191, 19);
-            this.BusinessDescription.TabIndex = 28;
-            this.BusinessDescription.Text = "Description";
+            this.BusinessDescription.Size = new System.Drawing.Size(191, 20);
+            this.BusinessDescription.TabIndex = 1;
             // 
             // panel1
             // 
@@ -160,10 +168,10 @@
             this.BusinessName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BusinessName.ForeColor = System.Drawing.Color.White;
             this.BusinessName.Location = new System.Drawing.Point(312, 82);
+            this.BusinessName.MaxLength = 25;
             this.BusinessName.Name = "BusinessName";
             this.BusinessName.Size = new System.Drawing.Size(191, 19);
-            this.BusinessName.TabIndex = 25;
-            this.BusinessName.Text = "BusinessName";
+            this.BusinessName.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -183,7 +191,7 @@
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(65, 31);
-            this.button1.TabIndex = 38;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -197,7 +205,7 @@
             this.button4.Location = new System.Drawing.Point(723, 9);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(65, 31);
-            this.button4.TabIndex = 40;
+            this.button4.TabIndex = 7;
             this.button4.Text = "Close";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -219,11 +227,67 @@
             this.Price.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Price.ForeColor = System.Drawing.SystemColors.Window;
             this.Price.Location = new System.Drawing.Point(282, 285);
+            this.Price.MaxLength = 10;
             this.Price.Name = "Price";
             this.Price.Size = new System.Drawing.Size(208, 19);
-            this.Price.TabIndex = 42;
-            this.Price.Text = "Price";
+            this.Price.TabIndex = 4;
             this.Price.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Price_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(129, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 22);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "BusinessName";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(161, 139);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 22);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Description";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(133, 191);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(134, 22);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Room Number";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(130, 239);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(137, 22);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Phone Number";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(213, 289);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 22);
+            this.label6.TabIndex = 46;
+            this.label6.Text = "Price";
             // 
             // CreateBusiness
             // 
@@ -231,6 +295,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(800, 485);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.Price);
             this.Controls.Add(this.button4);
@@ -276,5 +345,10 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox Price;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

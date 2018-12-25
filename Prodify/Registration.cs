@@ -21,14 +21,7 @@ namespace Prodify
             StrTextBox = strTextBox; 
             InitializeComponent();
             label1.Text = StrTextBox; 
-
         }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
@@ -40,73 +33,107 @@ namespace Prodify
             Log_in.Show();
             Hide();
         }
-
-        private void PhoneNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Course_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
 
             if (Client) {
-                Client newClient = new Client(UName.Text, System.Convert.ToInt32(Room_Number.Text), System.Convert.ToInt32(Course.Text), PhoneNumber.Text , System.Convert.ToInt32(Age.Text), Email.Text, UPassword.Text, Dormitory.Text);
+                try
+                {
+                    Client newClient = new Client(UName.Text, System.Convert.ToInt32(Room_Number.Text), System.Convert.ToInt32(Course.Text), PhoneNumber.Text, System.Convert.ToInt32(Age.Text), Email.Text, UPassword.Text, Dormitory.Text);
+                    ClientRepository repository = new ClientRepository(); 
+                    if (repository.Add(newClient))
+                    {
+                        MessageBox.Show("Registering proccess was succesful");
+                    }
+                    else
+                    {
+                        MessageBox.Show("We could't register");
+                    }
 
-            if (newClient.Registrate()) {
-                MessageBox.Show("Registering proccess was succesful");
-            }
-            else
-            {
-                MessageBox.Show("We could't register");
-            }
+                    Form1 Log_in = new Form1(StrTextBox, Client);
+                    Log_in.Show();
+                    Close();
+                }
+                catch {
+                    MessageBox.Show("Please fill up the form correctly");
 
-            Form1 Log_in = new Form1(StrTextBox, Client);
-            Log_in.Show();
-            Close(); 
+                }
+
             }else {
-                Seller newSeller = new Seller(UName.Text, UPassword.Text, System.Convert.ToInt32(Room_Number.Text), System.Convert.ToInt32(Course.Text), PhoneNumber.Text, System.Convert.ToInt32(Age.Text), Email.Text,  Dormitory.Text);
-                if (newSeller.Registrate())
-                {
 
-                    MessageBox.Show("Registering proccess was succesful");
+                try {
+                    Seller newSeller = new Seller(UName.Text, UPassword.Text, System.Convert.ToInt32(Room_Number.Text), System.Convert.ToInt32(Course.Text), PhoneNumber.Text, System.Convert.ToInt32(Age.Text), Email.Text, Dormitory.Text);
+                    SellerRepository repository = new SellerRepository(); 
+                    if (repository.Add(newSeller))
+                    {
+                        MessageBox.Show("Registering proccess was succesful");
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("We could't register");
+
+                    }
+                    Form1 Log_in = new Form1(StrTextBox, Client);
+                    Log_in.Show();
+                    Close();
                 }
-                else
-                {
-                    MessageBox.Show("We could't register");
-
+                catch {
+                    MessageBox.Show("Please fill up the form correctly");
                 }
-                Form1 Log_in = new Form1(StrTextBox, Client);
-                Log_in.Show();
-                Close();
+                
 
 
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void Room_Number_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46) {
+                e.Handled = true;
+            }
+        }
+
+        private void Registration_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Age_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
 
         }
 
-        private void Registration_Load(object sender, EventArgs e)
+        private void Course_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void PhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
 
         }
 
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
     }
 }

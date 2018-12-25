@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Prodify
 {
-    interface IRepository<T> where T: IEntity
+    interface IRepository<IUser>
     {
-        IEnumerable<T> List { get;  }
-        void Add(T entity);
-        void Delete(T entity);
-        void Update(T entity);
-        T FindById(int Id); 
+        bool Add(IUser user);
+        bool Delete(IUser entity);
+        void Update(IUser entity);
+        bool FindById(IUser Id); 
     }
 }

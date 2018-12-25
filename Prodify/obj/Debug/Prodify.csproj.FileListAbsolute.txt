@@ -11,5 +11,8 @@
 \\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.pdb
 \\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.CreateBusiness.resources
 \\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.Registration.resources
-\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.UserWall.resources
 \\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.SellerWall.resources
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.UserWall.resources
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.UpdateClient.resources
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.UpdateSeller.resources
+\\vmware-host\Shared Folders\Documents\Projects\Prodify\Prodify\obj\Debug\Prodify.UpdateBusiness.resources
