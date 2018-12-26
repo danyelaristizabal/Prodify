@@ -70,14 +70,16 @@ namespace Prodify
         }
         private void button2_Click_1(object sender, EventArgs e)
         {
-            
-            
-                if (businessRepository.Delete(SelectedBusinessName))
+          
+
+            if (businessRepository.Delete(SelectedBusinessName))
                 {
                     MessageBox.Show("Business Deleted Succesfully");
                     dataGridView1.DataSource = sellerRepository.GetBusinessList(Myseller);
-                dataGridView2.DataSource = sellerRepository.GetAllBusinessList(Myseller); 
-                }
+                dataGridView2.DataSource = sellerRepository.GetAllBusinessList(Myseller);
+                label1.Text = "Your Business " + businessRepository.Count(Myseller.Name, Myseller.Dormitory);
+                label2.Text = "Total Business in your Dorm: " + businessRepository.Count(null, Myseller.Dormitory);
+            }
           
         }
 
