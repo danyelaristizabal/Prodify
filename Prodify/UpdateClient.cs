@@ -58,5 +58,10 @@ namespace Prodify
             Close(); 
 
         }
+
+        private void UName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

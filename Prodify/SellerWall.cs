@@ -79,6 +79,7 @@ namespace Prodify
                 dataGridView2.DataSource = sellerRepository.GetAllBusinessList(Myseller);
                 label1.Text = "Your Business " + businessRepository.Count(Myseller.Name, Myseller.Dormitory);
                 label2.Text = "Total Business in your Dorm: " + businessRepository.Count(null, Myseller.Dormitory);
+                SelectedBusinessName = null; 
             }
           
         }

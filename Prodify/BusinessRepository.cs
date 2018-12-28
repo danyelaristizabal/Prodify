@@ -34,10 +34,10 @@ namespace Prodify
                 sq.Close();
                 return true;
             }
-            catch (Exception E)
+            catch
             {
                 sq.Close();
-                MessageBox.Show("ERROR:" + E);
+                MessageBox.Show("This Business name is not disponible");
                 return false;
             }
         }
@@ -80,12 +80,12 @@ namespace Prodify
                 scmd.ExecuteScalar();
 
                 sq.Close();
-                MessageBox.Show("SAVED");
+                MessageBox.Show("Information Updated Succesfully");
                 return true;
             }
             catch (Exception E)
             {
-                MessageBox.Show("Error updating:" + E);
+                MessageBox.Show("Error updating");
                 sq.Close();
                 return false;
             }

@@ -56,8 +56,6 @@
     <Compile Include="CreateBusiness.Designer.cs">
       <DependentUpon>CreateBusiness.cs</DependentUpon>
     </Compile>
-    <Compile Include="IEntity.cs" />
-    <Compile Include="IRepository.cs" />
     <Compile Include="IUser.cs" />
     <Compile Include="Log in.cs">
       <SubType>Form</SubType>

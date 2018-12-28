@@ -168,7 +168,7 @@
             this.BusinessName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BusinessName.ForeColor = System.Drawing.Color.White;
             this.BusinessName.Location = new System.Drawing.Point(312, 82);
-            this.BusinessName.MaxLength = 25;
+            this.BusinessName.MaxLength = 327;
             this.BusinessName.Name = "BusinessName";
             this.BusinessName.Size = new System.Drawing.Size(191, 19);
             this.BusinessName.TabIndex = 0;

@@ -386,6 +386,7 @@
             this.UName.ReadOnly = true;
             this.UName.Size = new System.Drawing.Size(191, 19);
             this.UName.TabIndex = 55;
+            this.UName.TextChanged += new System.EventHandler(this.UName_TextChanged);
             // 
             // pictureBox1
             // 

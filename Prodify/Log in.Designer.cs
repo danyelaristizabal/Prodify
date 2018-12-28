@@ -70,6 +70,7 @@
             this.UName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UName.ForeColor = System.Drawing.Color.White;
             this.UName.Location = new System.Drawing.Point(340, 109);
+            this.UName.MaxLength = 327;
             this.UName.Name = "UName";
             this.UName.Size = new System.Drawing.Size(191, 19);
             this.UName.TabIndex = 0;
@@ -91,6 +92,7 @@
             this.UPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UPassword.ForeColor = System.Drawing.SystemColors.Window;
             this.UPassword.Location = new System.Drawing.Point(340, 173);
+            this.UPassword.MaxLength = 327;
             this.UPassword.Name = "UPassword";
             this.UPassword.PasswordChar = '*';
             this.UPassword.Size = new System.Drawing.Size(208, 19);

@@ -79,7 +79,7 @@
             this.UPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UPassword.ForeColor = System.Drawing.SystemColors.Window;
             this.UPassword.Location = new System.Drawing.Point(376, 103);
-            this.UPassword.MaxLength = 25;
+            this.UPassword.MaxLength = 329;
             this.UPassword.Name = "UPassword";
             this.UPassword.PasswordChar = '*';
             this.UPassword.Size = new System.Drawing.Size(208, 19);
@@ -101,7 +101,7 @@
             this.UName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UName.ForeColor = System.Drawing.Color.White;
             this.UName.Location = new System.Drawing.Point(376, 56);
-            this.UName.MaxLength = 25;
+            this.UName.MaxLength = 329;
             this.UName.Name = "UName";
             this.UName.Size = new System.Drawing.Size(191, 19);
             this.UName.TabIndex = 0;
@@ -282,7 +282,7 @@
             this.Email.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Email.ForeColor = System.Drawing.Color.White;
             this.Email.Location = new System.Drawing.Point(345, 318);
-            this.Email.MaxLength = 32;
+            this.Email.MaxLength = 328;
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(191, 19);
             this.Email.TabIndex = 6;
@@ -303,7 +303,7 @@
             this.Dormitory.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dormitory.ForeColor = System.Drawing.SystemColors.Window;
             this.Dormitory.Location = new System.Drawing.Point(347, 362);
-            this.Dormitory.MaxLength = 25;
+            this.Dormitory.MaxLength = 328;
             this.Dormitory.Name = "Dormitory";
             this.Dormitory.Size = new System.Drawing.Size(208, 19);
             this.Dormitory.TabIndex = 7;

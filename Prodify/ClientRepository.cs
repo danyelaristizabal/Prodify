@@ -34,7 +34,7 @@ namespace Prodify
             }
             catch (Exception E)
             {
-                MessageBox.Show("Error:" + E);
+                MessageBox.Show("This user name is not disponible");
                 sq.Close(); 
                 return false; 
             }
@@ -71,7 +71,7 @@ namespace Prodify
                 scmd.ExecuteScalar();
                 
                 sq.Close();
-                MessageBox.Show("SAVED");
+                MessageBox.Show("Information Updated Succesfully");
                 return true;
             }
             catch (Exception E)
