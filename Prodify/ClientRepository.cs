@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Prodify
@@ -11,8 +8,10 @@ namespace Prodify
     class ClientRepository {
 
         public List<Client> Clients { get; private set; }
-        SqlConnection sq = new SqlConnection(@"Data Source =DANYEL-PC\SQLEXPRESS; Initial Catalog =Client; database =ProdifyDatabase; integrated security = SSPI");
-        
+
+        SqlConnection sq = new SqlConnection(@"Server=127.0.0.1,1433; Database=ProdifyDatabase; User Id=sa;Password=Miaumiau3000");
+        // SqlConnection sq = new SqlConnection(@"Data Source =DANYEL-PC\SQLEXPRESS; Initial Catalog =Client; database =ProdifyDatabase; integrated security = SSPI");
+       // SqlConnection sq = new SqlConnection(@"Server=127.0.0.1,1433; Database=ProdifyDatabase; User Id=sa;Password=Miaumiau3000");
         public bool Add(Client client) {
             SqlCommand scmd = new SqlCommand("INSERT INTO Client(Name, ClientRoom,  Course,Phone, Age, Password, Email, Dormitory) VALUES(@Name, @ClientRoom,  @Course, @Phone, @Age, @Password, @Email, @Dormitory);", sq);
             scmd.Parameters.Clear();
