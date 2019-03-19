@@ -93,7 +93,6 @@
     <Compile Include="SellerWall.Designer.cs">
       <DependentUpon>SellerWall.cs</DependentUpon>
     </Compile>
-    <Compile Include="sq\ConnectionString.cs" />
     <Compile Include="UpdateBusiness.cs">
       <SubType>Form</SubType>
     </Compile>
