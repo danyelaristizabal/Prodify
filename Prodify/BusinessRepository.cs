@@ -15,7 +15,7 @@ namespace Prodify
 
 
 
-        SqlConnection sq = new SqlConnection(@"Data Source =DANYEL-PC\SQLEXPRESS; Initial Catalog =Business; database =ProdifyDatabase; integrated security = SSPI");
+        SqlConnection sq = new SqlConnection(@"Data Source =DESKTOP-KGC5T7J; Initial Catalog =Business; database =ProdifyDatabase; integrated security = SSPI");
         public bool Add(Business business)
         {
             SqlCommand scmd = new SqlCommand("INSERT INTO Business(Name, Description, Price, Nkomnata, Seller, Dormitory, Phone) VALUES(@Name, @Description, @Price, @Nkomnata, @Seller, @Dormitory,@Phone); ", sq);
@@ -161,7 +161,7 @@ namespace Prodify
         {
 
             SqlConnection sq = new SqlConnection();
-            sq.ConnectionString = @"Data Source =DANYEL-PC\SQLEXPRESS; Initial Catalog =Business; database =ProdifyDatabase; integrated security = SSPI";
+            sq.ConnectionString = @"Data Source =DESKTOP-KGC5T7J; Initial Catalog =Business; database =ProdifyDatabase; integrated security = SSPI";
             DataTable sellertable = new DataTable();
             SqlCommand getseller = new SqlCommand("select * from Business where Name = @Name", sq);
             getseller.Parameters.AddWithValue("@Name", Name);

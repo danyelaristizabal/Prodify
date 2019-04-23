@@ -9,9 +9,7 @@ namespace Prodify
 
         public List<Client> Clients { get; private set; }
 
-        SqlConnection sq = new SqlConnection(@"Server=127.0.0.1,1433; Database=ProdifyDatabase; User Id=sa;Password=Miaumiau3000");
-        // SqlConnection sq = new SqlConnection(@"Data Source =DANYEL-PC\SQLEXPRESS; Initial Catalog =Client; database =ProdifyDatabase; integrated security = SSPI");
-       // SqlConnection sq = new SqlConnection(@"Server=127.0.0.1,1433; Database=ProdifyDatabase; User Id=sa;Password=Miaumiau3000");
+         SqlConnection sq = new SqlConnection(@"Data Source =DESKTOP-KGC5T7J; Initial Catalog =Client; database =ProdifyDatabase; integrated security = SSPI");
         public bool Add(Client client) {
             SqlCommand scmd = new SqlCommand("INSERT INTO Client(Name, ClientRoom,  Course,Phone, Age, Password, Email, Dormitory) VALUES(@Name, @ClientRoom,  @Course, @Phone, @Age, @Password, @Email, @Dormitory);", sq);
             scmd.Parameters.Clear();
@@ -96,6 +94,5 @@ namespace Prodify
                 return false;
             }
         }
-       
     }
 }

@@ -8,14 +8,14 @@ namespace Prodify
 {
     class SellerRepository 
     {
-        SqlConnection sq = new SqlConnection(@"Data Source =DANYEL-PC\SQLEXPRESS; Initial Catalog =Seller; database =ProdifyDatabase; integrated security = SSPI");
+        SqlConnection sq = new SqlConnection(@"Data Source =DESKTOP-KGC5T7J; Initial Catalog =Seller; database =ProdifyDatabase; integrated security = SSPI");
        
         public List<Seller> Sellers { get; private set; }
 
             public bool Add(Seller seller)
             {
                 SqlConnection sq = new SqlConnection();
-                sq.ConnectionString = @"Data Source =DANYEL-PC\SQLEXPRESS; Initial Catalog =Seller; database =ProdifyDatabase; integrated security = SSPI";
+                sq.ConnectionString = @"Data Source =DESKTOP-KGC5T7J; Initial Catalog =Seller; database =ProdifyDatabase; integrated security = SSPI";
                 SqlCommand scmd = new SqlCommand("INSERT INTO Seller(Name, Password,  NKomnata,Course, Phone, Age, Email, Dormitory) VALUES(@Name, @Password, @NKomnata,@Course, @Phone, @Age, @Email, @Dormitory);", sq);
                 scmd.Parameters.Clear();
                 scmd.Parameters.AddWithValue("@Name", seller.Name);
@@ -129,7 +129,7 @@ namespace Prodify
             {
                 DataTable dtBusiness = new DataTable();
                 SqlConnection sq = new SqlConnection();
-                sq.ConnectionString = @"Data Source =DANYEL-PC\SQLEXPRESS; Initial Catalog =Business; database =ProdifyDatabase; integrated security = SSPI";
+                sq.ConnectionString = @"Data Source =DESKTOP-KGC5T7J; Initial Catalog =Business; database =ProdifyDatabase; integrated security = SSPI";
                 SqlCommand scmd = new SqlCommand("SELECT * FROM Business WHERE Dormitory = @Dormitory", sq);
                 scmd.Parameters.AddWithValue("@Dormitory", seller.Dormitory);
                 sq.Open();

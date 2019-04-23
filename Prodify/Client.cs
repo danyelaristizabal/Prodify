@@ -33,7 +33,7 @@ namespace Prodify
 
         public void Construct() {
             SqlConnection sq = new SqlConnection();
-            sq.ConnectionString = @"Data Source =DANYEL-PC\SQLEXPRESS; Initial Catalog =Client; database =ProdifyDatabase; integrated security = SSPI";
+            sq.ConnectionString = @"Data Source =DESKTOP-KGC5T7J; Initial Catalog =Client; database =ProdifyDatabase; integrated security = SSPI";
             DataTable sellertable = new DataTable();
             SqlCommand getseller = new SqlCommand("select * from Client where Name = @Name", sq);
             getseller.Parameters.AddWithValue("@Name", Name);

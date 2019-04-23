@@ -36,7 +36,7 @@ namespace Prodify
         {
 
             SqlConnection sq = new SqlConnection();
-            sq.ConnectionString = @"Data Source =DANYEL-PC\SQLEXPRESS; Initial Catalog =Seller; database =ProdifyDatabase; integrated security = SSPI";
+            sq.ConnectionString = @"Data Source =DESKTOP-KGC5T7J; Initial Catalog =Seller; database =ProdifyDatabase; integrated security = SSPI";
             DataTable sellertable = new DataTable();
             SqlCommand getseller = new SqlCommand("select * from Seller where Name = @Name", sq);
             getseller.Parameters.AddWithValue("@Name", Name);
