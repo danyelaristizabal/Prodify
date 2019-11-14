@@ -16,28 +16,43 @@ namespace Prodify
 
 
         SqlConnection sq = new SqlConnection(@"Data Source =DESKTOP-KGC5T7J; Initial Catalog =Business; database =ProdifyDatabase; integrated security = SSPI");
+
         public bool Add(Business business)
         {
             SqlCommand scmd = new SqlCommand("INSERT INTO Business(Name, Description, Price, Nkomnata, Seller, Dormitory, Phone) VALUES(@Name, @Description, @Price, @Nkomnata, @Seller, @Dormitory,@Phone); ", sq);
+
             scmd.Parameters.Clear();
+
             scmd.Parameters.AddWithValue("@Name", business.Name);
+
             scmd.Parameters.AddWithValue("@Description", business.Description);
+
             scmd.Parameters.AddWithValue("@Price", business.Price);
+
             scmd.Parameters.AddWithValue("@Nkomnata", business.Nkomnata);
+
             scmd.Parameters.AddWithValue("@Seller", business.Seller);
+
             scmd.Parameters.AddWithValue("@Dormitory", business.Dormitory);
+
             scmd.Parameters.AddWithValue("@Phone", business.Phone);
+
             sq.Open();
+
             try
             {
                 scmd.ExecuteScalar();
+
                 sq.Close();
+
                 return true;
             }
             catch
             {
                 sq.Close();
+
                 MessageBox.Show("This Business name is not disponible");
+                
                 return false;
             }
         }
