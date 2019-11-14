@@ -19,11 +19,10 @@ namespace Prodify
         int index;
         DataGridViewRow selectedRow;
         string SelectedBusinessName;
-
-
         public SellerWall(Seller myseller)
         {
             Myseller = myseller;
+            
             InitializeComponent();
         }
 
