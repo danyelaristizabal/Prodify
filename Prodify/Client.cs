@@ -28,6 +28,7 @@ namespace Prodify
         public string Dormitory { get; private set; }
 
         public Client(string name, int nkomnata, int course, string phone, int age, string email, string password, string dormitory) {
+
             NKomnata = nkomnata;
 
             Name = name;
@@ -41,8 +42,9 @@ namespace Prodify
             Email = email;
 
             Password = password;
-            
+
             Dormitory = dormitory;
+            
         }
 
         public void Construct() {
